@@ -1,0 +1,334 @@
+{
+ "paired_qwen_haiku": {
+  "both": 1254,
+  "qwen_only": 825,
+  "haiku_only": 167,
+  "neither": 728
+ },
+ "n": 2974,
+ "causes_q": [
+  {
+   "wrong_intent": 352,
+   "intent_ok_diff_slot_types": 300,
+   "intent_ok_same_slot_types_diff_values": 111,
+   "intent_ok_extra_slots": 69,
+   "intent_ok_missing_all_slots": 63
+  },
+  {
+   "wrong_intent": 342,
+   "intent_ok_diff_slot_types": 292,
+   "intent_ok_extra_slots": 68,
+   "intent_ok_same_slot_types_diff_values": 101,
+   "intent_ok_missing_all_slots": 64
+  },
+  {
+   "wrong_intent": 347,
+   "intent_ok_diff_slot_types": 306,
+   "intent_ok_extra_slots": 72,
+   "intent_ok_same_slot_types_diff_values": 98,
+   "intent_ok_missing_all_slots": 60
+  }
+ ],
+ "causes_h": [
+  {
+   "wrong_intent": 508,
+   "intent_ok_same_slot_types_diff_values": 154,
+   "intent_ok_missing_all_slots": 133,
+   "intent_ok_diff_slot_types": 584,
+   "intent_ok_extra_slots": 165,
+   "unparseable": 9
+  },
+  {
+   "wrong_intent": 502,
+   "intent_ok_same_slot_types_diff_values": 159,
+   "intent_ok_missing_all_slots": 129,
+   "intent_ok_diff_slot_types": 589,
+   "intent_ok_extra_slots": 158,
+   "unparseable": 12
+  },
+  {
+   "wrong_intent": 515,
+   "intent_ok_same_slot_types_diff_values": 141,
+   "intent_ok_diff_slot_types": 585,
+   "intent_ok_missing_all_slots": 139,
+   "intent_ok_extra_slots": 163,
+   "unparseable": 7
+  }
+ ],
+ "scen_ok_intent_wrong_q": [
+  94,
+  81,
+  93
+ ],
+ "scen_ok_intent_wrong_h": [
+  142,
+  140,
+  150
+ ],
+ "gold_noslot_n": 994,
+ "noslot_slots_exact_q": [
+  0.8934,
+  0.9014,
+  0.8913
+ ],
+ "noslot_slots_exact_h": [
+  0.7404,
+  0.7435,
+  0.7404
+ ],
+ "withslot_n": 1980,
+ "withslot_slots_exact_q": [
+  0.7005,
+  0.7136,
+  0.7071
+ ],
+ "withslot_slots_exact_h": [
+  0.4727,
+  0.4662,
+  0.4758
+ ],
+ "per_scenario": {
+  "alarm": [
+   96,
+   0.92,
+   0.792
+  ],
+  "audio": [
+   62,
+   0.876,
+   0.683
+  ],
+  "calendar": [
+   402,
+   0.639,
+   0.348
+  ],
+  "cooking": [
+   72,
+   0.727,
+   0.458
+  ],
+  "datetime": [
+   103,
+   0.744,
+   0.56
+  ],
+  "email": [
+   271,
+   0.806,
+   0.515
+  ],
+  "general": [
+   189,
+   0.586,
+   0.266
+  ],
+  "iot": [
+   220,
+   0.795,
+   0.642
+  ],
+  "lists": [
+   142,
+   0.749,
+   0.523
+  ],
+  "music": [
+   81,
+   0.72,
+   0.675
+  ],
+  "news": [
+   124,
+   0.68,
+   0.401
+  ],
+  "play": [
+   387,
+   0.585,
+   0.41
+  ],
+  "qa": [
+   288,
+   0.771,
+   0.686
+  ],
+  "recommendation": [
+   94,
+   0.567,
+   0.411
+  ],
+  "social": [
+   106,
+   0.66,
+   0.145
+  ],
+  "takeaway": [
+   57,
+   0.561,
+   0.421
+  ],
+  "transport": [
+   124,
+   0.696,
+   0.484
+  ],
+  "weather": [
+   156,
+   0.774,
+   0.449
+  ]
+ },
+ "slot_type_f1": {
+  "date": [
+   416,
+   0.894,
+   0.752
+  ],
+  "place_name": [
+   281,
+   0.839,
+   0.757
+  ],
+  "event_name": [
+   260,
+   0.754,
+   0.539
+  ],
+  "person": [
+   219,
+   0.888,
+   0.708
+  ],
+  "time": [
+   193,
+   0.756,
+   0.683
+  ],
+  "media_type": [
+   128,
+   0.835,
+   0.058
+  ],
+  "business_name": [
+   92,
+   0.761,
+   0.701
+  ],
+  "weather_descriptor": [
+   82,
+   0.798,
+   0.425
+  ]
+ },
+ "conf_q0": [
+  [
+   [
+    "general_quirky",
+    "qa_factoid"
+   ],
+   18
+  ],
+  [
+   [
+    "general_quirky",
+    "news_query"
+   ],
+   9
+  ],
+  [
+   [
+    "qa_factoid",
+    "general_quirky"
+   ],
+   8
+  ],
+  [
+   [
+    "play_music",
+    "play_radio"
+   ],
+   6
+  ],
+  [
+   [
+    "general_quirky",
+    "calendar_query"
+   ],
+   6
+  ]
+ ],
+ "conf_h1": [
+  [
+   [
+    "general_quirky",
+    "qa_factoid"
+   ],
+   41
+  ],
+  [
+   [
+    "play_music",
+    "music_query"
+   ],
+   24
+  ],
+  [
+   [
+    "calendar_set",
+    "alarm_set"
+   ],
+   21
+  ],
+  [
+   [
+    "cooking_recipe",
+    "cooking_query"
+   ],
+   20
+  ],
+  [
+   [
+    "calendar_set",
+    "calendar_query"
+   ],
+   18
+  ]
+ ],
+ "ex_haiku_unparse": [
+  [
+   "user friendly",
+   "I'm not sure what you'd like me to do with \"user friendly.\" Could you share the voice assistant comm"
+  ],
+  [
+   "read that back",
+   "I can't read back an earlier answer as a spoken response, but here's the text of the last reply: it'"
+  ],
+  [
+   "s.",
+   "I need the text you'd like me to classify. Your message \"s.\" is too short to determine a scenario, i"
+  ],
+  [
+   "please see what you wrote for this question",
+   "I don't have a previous response to show you. This is the start of our conversation, so there's no q"
+  ],
+  [
+   "i do not know how to answer this question you left a word or two out",
+   "I'm not sure which question you mean, since I haven't asked you one yet. My role here is to classify"
+  ]
+ ],
+ "ex_q_unparse": 0,
+ "haiku_records_changing_across_3_runs": 212,
+ "mean_words": 6.82,
+ "quirky_n": 169,
+ "quirky_whole_q": [
+  0.568,
+  0.55,
+  0.574
+ ],
+ "quirky_whole_h": [
+  0.231,
+  0.219,
+  0.225
+ ]
+}

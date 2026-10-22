@@ -1,0 +1,26 @@
+balance before: Current balance: 598.36 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  torchao: ['  Successfully uninstalled torchao-0.10.0']
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== restore adapter seed 0
+  
+started: restore_adapter_seed_0
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_auth.py:138: UserWarning: 
+Error while fetching `HF_TOKEN` secret value from your vault: 'Requesting secret HF_TOKEN timed out. Secrets can only be fetched when running from the Colab UI.'.
+  warnings.warn(f"\nError while fetching `HF_TOKEN` secret value from your vault: '{str(e)}'.")
+Traceback (most recent call last):
+  File "/tmp/ipykernel_1752/1851819826.py", line 18, in _job
+    _res = set_peft_model_state_dict(_m, load_file('/content/adapter_in_0/adapter_model.safetensors'))
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/safetensors/torch.py", line 359, in load_file
+    with safe_open(filename, framework="pt", device=device, backend=backend) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: No such file or directory: /content/adapter_in_0/adapter_model.safetensors
+
+saved 2 files from the remote machine to results/rescued/
+FAILED. The session is KEPT so nothing is lost. Stop it with: colab --auth=adc stop -s exp. Current balance: 598.36 compute units
+step failed: restore adapter seed 0

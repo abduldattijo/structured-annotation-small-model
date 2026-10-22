@@ -1,0 +1,4 @@
+.env*
+*.safetensors
+__pycache__/
+local-secrets/

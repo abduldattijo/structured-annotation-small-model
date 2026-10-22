@@ -1,0 +1,91 @@
+balance before: Current balance: 599.81 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== 1. prompted model, 50 dev rows
+{
+ "n": 50,
+ "errors": 0,
+ "parse_failures": 0,
+ "not_clean_replies": 0,
+ "scenario_accuracy": 0.86,
+ "intent_accuracy": 0.78,
+ "slots_exact_accuracy": 0.58,
+ "whole_record_accuracy": 0.46,
+ "slot_precision": 0.62,
+ "slot_recall": 0.6458333333333334,
+ "slot_f1": 0.6326530612244898,
+ "cost_usd": 0.006205,
+ "input_tokens_mean": 1052.42,
+ "output_tokens_mean": 37.7,
+ "seconds_per_call_median": 0.8688802719116211,
+ "error_or_cut_off_rows": 0,
+ "model": "claude-haiku-5-5",
+ "split": "dev",
+ "workers": 1
+}
+{'n': 50,
+ 'errors': 0,
+ 'parse_failures': 0,
+ 'not_clean_replies': 0,
+ 'scenario_accuracy': 0.86,
+ 'intent_accuracy': 0.78,
+ 'slots_exact_accuracy': 0.58,
+ 'whole_record_accuracy': 0.46,
+ 'slot_precision': 0.62,
+ 'slot_recall': 0.6458333333333334,
+ 'slot_f1': 0.6326530612244898,
+ 'cost_usd': 0.006205,
+ 'input_tokens_mean': 1052.42,
+ 'output_tokens_mean': 37.7,
+ 'seconds_per_call_median': 0.8688802719116211,
+ 'error_or_cut_off_rows': 0,
+ 'model': 'claude-haiku-5-5',
+ 'split': 'dev',
+ 'workers': 1}
+=== 2. LoRA training, 1000 rows, 1 epoch
+[0;32m--> 344[0;31m             [0mself[0m[0;34m.[0m[0minject_adapter[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mmodel[0m[0;34m,[0m [0madapter_name[0m[0;34m,[0m [0mlow_cpu_mem_usage[0m[0;34m=[0m[0mlow_cpu_mem_usage[0m[0;34m,[0m [0mstate_dict[0m[0;34m=[0m[0mstate_dict[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    345[0m [0;34m[0m[0m
+[1;32m    346[0m         [0mself[0m[0;34m.[0m[0m_post_injection_hook[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mmodel[0m[0;34m,[0m [0mself[0m[0;34m.[0m[0mpeft_config[0m[0;34m[[0m[0madapter_name[0m[0;34m][0m[0;34m,[0m [0madapter_name[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.13/dist-packages/peft/tuners/tuners_utils.py[0m in [0;36minject_adapter[0;34m(self, model, adapter_name, autocast_adapter_dtype, low_cpu_mem_usage, state_dict)[0m
+[1;32m    976[0m                     [0mctx[0m [0;34m=[0m [0minit_empty_weights[0m [0;32mif[0m [0mlow_cpu_mem_usage[0m [0;32melse[0m [0mnullcontext[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    977[0m                     [0;32mwith[0m [0mctx[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 978[0;31m                         self._create_and_replace(
+[0m[1;32m    979[0m                             [0mpeft_config[0m[0;34m,[0m [0madapter_name[0m[0;34m,[0m [0mtarget[0m[0;34m,[0m [0mtarget_name[0m[0;34m,[0m [0mparent[0m[0;34m,[0m [0mcurrent_key[0m[0;34m=[0m[0mkey[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    980[0m                         )
+[0;32m/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/model.py[0m in [0;36m_create_and_replace[0;34m(self, lora_config, adapter_name, target, target_name, parent, current_key, parameter_name)[0m
+[1;32m    387[0m                 )
+[1;32m    388[0m             [0mdevice_map[0m [0;34m=[0m [0mget_device_map[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mmodel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 389[0;31m             [0mnew_module[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_create_new_module[0m[0;34m([0m[0mlora_config[0m[0;34m,[0m [0madapter_name[0m[0;34m,[0m [0mtarget[0m[0;34m,[0m [0mdevice_map[0m[0;34m=[0m[0mdevice_map[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    390[0m             [0;32mif[0m [0madapter_name[0m [0;32mnot[0m [0;32min[0m [0mself[0m[0;34m.[0m[0mactive_adapters[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    391[0m                 [0;31m# adding an additional adapter: it is not automatically trainable[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/model.py[0m in [0;36m_create_new_module[0;34m(lora_config, adapter_name, target, **kwargs)[0m
+[1;32m    550[0m         [0mnew_module[0m [0;34m=[0m [0;32mNone[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    551[0m         [0;32mfor[0m [0mdispatcher[0m [0;32min[0m [0mdispatchers[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 552[0;31m             [0mnew_module[0m [0;34m=[0m [0mdispatcher[0m[0;34m([0m[0mtarget[0m[0;34m,[0m [0madapter_name[0m[0;34m,[0m [0mconfig[0m[0;34m=[0m[0mlora_config[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    553[0m             [0;32mif[0m [0mnew_module[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m  [0;31m# first match wins[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    554[0m                 [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
+[0;32m/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/torchao.py[0m in [0;36mdispatch_torchao[0;34m(target, adapter_name, config, **kwargs)[0m
+[1;32m    158[0m         [0;32mreturn[0m [0mnew_module[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    159[0m [0;34m[0m[0m
+[0;32m--> 160[0;31m     [0;32mif[0m [0;32mnot[0m [0mis_torchao_available[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    161[0m         [0;32mreturn[0m [0mnew_module[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    162[0m [0;34m[0m[0m
+[0;32m/usr/local/lib/python3.13/dist-packages/peft/import_utils.py[0m in [0;36mis_torchao_available[0;34m()[0m
+[1;32m    160[0m [0;34m[0m[0m
+[1;32m    161[0m     [0;32mif[0m [0mtorchao_version[0m [0;34m<[0m [0mTORCHAO_MINIMUM_VERSION[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 162[0;31m         raise ImportError(
+[0m[1;32m    163[0m             [0;34mf"Found an incompatible version of torchao. Found version {torchao_version}, "[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    164[0m             [0;34mf"but only versions above {TORCHAO_MINIMUM_VERSION} are supported"[0m[0;34m[0m[0;34m[0m[0m
+[0;31mImportError[0m: Found an incompatible version of torchao. Found version 0.10.0, but only versions above 0.16.0 are supported[0;31m---------------------------------------------------------------------------[0;32m
+NOTE: If your import is failing due to a missing package, you can
+manually install dependencies using either !pip or !apt.
+
+To view examples of installing some common dependencies, click the
+"Open Examples" button below.
+[0;31m---------------------------------------------------------------------------[0m
+session stopped. Current balance: 599.81 compute units
+step failed: 2. LoRA training, 1000 rows, 1 epoch

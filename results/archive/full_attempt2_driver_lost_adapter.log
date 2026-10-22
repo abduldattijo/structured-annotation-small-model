@@ -1,0 +1,54 @@
+balance before: Current balance: 599.09 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  torchao: ['  Successfully uninstalled torchao-0.10.0']
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== train seed 0
+  
+{'step': 790, 'loss': 0.0389, 'seconds': 908.7}
+{'step': 800, 'loss': 0.0217, 'seconds': 920.0}
+{'step': 810, 'loss': 0.0242, 'seconds': 930.9}
+{'step': 820, 'loss': 0.0328, 'seconds': 941.9}
+{'step': 830, 'loss': 0.0111, 'seconds': 953.1}
+{'step': 840, 'loss': 0.0284, 'seconds': 964.3}
+{'step': 850, 'loss': 0.0196, 'seconds': 975.4}
+{'step': 860, 'loss': 0.021, 'seconds': 986.4}
+{'step': 870, 'loss': 0.0172, 'seconds': 997.4}
+{'step': 880, 'loss': 0.0313, 'seconds': 1008.5}
+{'step': 890, 'loss': 0.0282, 'seconds': 1019.6}
+{'step': 900, 'loss': 0.0154, 'seconds': 1030.4}
+{'step': 910, 'loss': 0.0204, 'seconds': 1041.5}
+{'step': 920, 'loss': 0.0292, 'seconds': 1052.4}
+{'step': 930, 'loss': 0.0143, 'seconds': 1063.2}
+{'step': 940, 'loss': 0.0385, 'seconds': 1074.1}
+{'step': 950, 'loss': 0.0224, 'seconds': 1085.2}
+{'step': 960, 'loss': 0.0079, 'seconds': 1096.2}
+{'step': 970, 'loss': 0.0253, 'seconds': 1107.0}
+{'step': 980, 'loss': 0.0256, 'seconds': 1117.9}
+{'step': 990, 'loss': 0.0322, 'seconds': 1129.1}
+{'step': 1000, 'loss': 0.0302, 'seconds': 1140.1}
+{'step': 1010, 'loss': 0.0257, 'seconds': 1150.9}
+{'step': 1020, 'loss': 0.0367, 'seconds': 1162.3}
+{'step': 1030, 'loss': 0.0215, 'seconds': 1173.2}
+{'step': 1040, 'loss': 0.0259, 'seconds': 1184.0}
+{'step': 1050, 'loss': 0.0215, 'seconds': 1194.8}
+{'step': 1060, 'loss': 0.0374, 'seconds': 1205.5}
+{'step': 1070, 'loss': 0.0275, 'seconds': 1216.2}
+{'step': 1080, 'loss': 0.0118, 'seconds': 1227.0}
+  finished in 1272 s
+=== dev sanity check seed 0
+  
+
+  finished in 35 s
+session stopped. Current balance: 598.71 compute units
+Traceback (most recent call last):
+  File "<home>/Downloads/01_Code_Projects/AI_Blog_Agent/article blog  agent/articles/structured-annotation-small-model/run_on_colab.py", line 258, in <module>
+    {"pilot": pilot, "prompts": prompts, "full": full}[what]()
+  File "<home>/Downloads/01_Code_Projects/AI_Blog_Agent/article blog  agent/articles/structured-annotation-small-model/run_on_colab.py", line 236, in full
+    dev = json.loads(text)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 339, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not NoneType

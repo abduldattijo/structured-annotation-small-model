@@ -1,0 +1,50 @@
+balance before: Current balance: 599.18 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  torchao: ['  Successfully uninstalled torchao-0.10.0']
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== prompt variant base, 300 dev rows
+  
+  225 rows, $0.0281
+  250 rows, $0.0311
+  275 rows, $0.0343
+  300 rows, $0.0374
+{
+ "n": 300,
+ "errors": 0,
+ "parse_failures": 5,
+ "not_clean_replies": 5,
+ "scenario_accuracy": 0.8733333333333333,
+ "intent_accuracy": 0.82,
+ "slots_exact_accuracy": 0.53,
+ "whole_record_accuracy": 0.4666666666666667,
+ "slot_precision": 0.5951557093425606,
+ "slot_recall": 0.5639344262295082,
+ "slot_f1": 0.5791245791245792,
+ "cost_usd": 0.037418,
+ "input_tokens_mean": 1052.3266666666666,
+ "output_tokens_mean": 38.99,
+ "seconds_per_call_median": 0.8840928077697754,
+ "error_or_cut_off_rows": 1,
+ "model": "claude-haiku-5-5",
+ "split": "dev",
+ "workers": 4,
+ "variant": "base",
+ "cache": false,
+ "n_examples": 3,
+ "cache_read_tokens_mean": 0.0,
+ "cache_write_tokens_mean": 0.0
+}
+Traceback (most recent call last):
+  File "/tmp/ipykernel_503/2735717568.py", line 10, in _job
+    import run_api; run_api.main(split='dev', n=300, seed=1, out='/content/prompt_base.jsonl', max_usd=0.6, workers=4, variant='base')
+                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/run_api.py", line 129, in main
+    raise RuntimeError(f"{len(bad)} rows had an error, a cut off reply, or an empty reply. Treat as errors, not results.")
+RuntimeError: 1 rows had an error, a cut off reply, or an empty reply. Treat as errors, not results.
+
+session stopped. Current balance: 599.18 compute units
+step failed: prompt variant base, 300 dev rows

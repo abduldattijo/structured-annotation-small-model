@@ -1,0 +1,43 @@
+balance before: Current balance: 598.71 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  torchao: ['  Successfully uninstalled torchao-0.10.0']
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== train seed 0
+  
+{'step': 790, 'loss': 0.0393, 'seconds': 893.5}
+{'step': 800, 'loss': 0.0215, 'seconds': 904.9}
+{'step': 810, 'loss': 0.0244, 'seconds': 916.2}
+{'step': 820, 'loss': 0.0346, 'seconds': 927.8}
+{'step': 830, 'loss': 0.0118, 'seconds': 939.3}
+{'step': 840, 'loss': 0.0254, 'seconds': 950.8}
+{'step': 850, 'loss': 0.0246, 'seconds': 962.4}
+{'step': 860, 'loss': 0.0217, 'seconds': 973.8}
+{'step': 870, 'loss': 0.0144, 'seconds': 985.4}
+{'step': 880, 'loss': 0.0317, 'seconds': 996.9}
+{'step': 890, 'loss': 0.0286, 'seconds': 1008.2}
+{'step': 900, 'loss': 0.0155, 'seconds': 1019.6}
+{'step': 910, 'loss': 0.0224, 'seconds': 1030.8}
+{'step': 920, 'loss': 0.0274, 'seconds': 1042.1}
+{'step': 930, 'loss': 0.0138, 'seconds': 1053.4}
+{'step': 940, 'loss': 0.0343, 'seconds': 1064.7}
+{'step': 950, 'loss': 0.0205, 'seconds': 1076.1}
+{'step': 960, 'loss': 0.0084, 'seconds': 1087.5}
+{'step': 970, 'loss': 0.0244, 'seconds': 1098.7}
+{'step': 980, 'loss': 0.0277, 'seconds': 1110.4}
+{'step': 990, 'loss': 0.0323, 'seconds': 1121.7}
+{'step': 1000, 'loss': 0.0297, 'seconds': 1133.2}
+{'step': 1010, 'loss': 0.0286, 'seconds': 1144.8}
+{'step': 1020, 'loss': 0.0393, 'seconds': 1156.7}
+{'step': 1030, 'loss': 0.0204, 'seconds': 1168.5}
+{'step': 1040, 'loss': 0.0252, 'seconds': 1180.2}
+{'step': 1050, 'loss': 0.0215, 'seconds': 1191.9}
+{'step': 1060, 'loss': 0.0392, 'seconds': 1203.3}
+{'step': 1070, 'loss': 0.0278, 'seconds': 1214.7}
+{'step': 1080, 'loss': 0.0138, 'seconds': 1226.1}
+  finished in 1293 s
+FAILED. The session is KEPT so nothing is lost. Stop it with: colab --auth=adc stop -s exp. Current balance: 598.36 compute units
+could not save adapter_config.json for seed 0

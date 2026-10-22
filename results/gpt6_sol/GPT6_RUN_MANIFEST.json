@@ -1,0 +1,23 @@
+{
+  "model": "gpt-6-sol",
+  "reasoning_effort": "none",
+  "max_output_tokens": 200,
+  "dataset": "MASSIVE English test",
+  "test_records": 2974,
+  "system_prompt_sha256": "a198e780bbd3af6670ba2700140e3ccdd31cff210bc603a8088ca26e37b8ea78",
+  "test_inputs_sha256": "d5b610c15eab6bbfe149e81bba4643b0bf5102088bb4ce916fd2a32acc666ea1",
+  "caller_sha256": "c7228984c169748beedd0c954ad08be5b7ad5520ad8476b3a824c9b7804141a5",
+  "scorer_sha256": "69556c974d562d845d1664c5d900ecbce9a441c49912b04ee6417c56aaebb2d8",
+  "pilot_records": 50,
+  "pilot_cost_usd": 0.076364,
+  "pilot_incomplete_rows": 0,
+  "pilot_errors": 0,
+  "projected_full_cost_usd": 4.5421,
+  "full_cap_usd": 10.5,
+  "prices_usd_per_million_tokens": {
+    "input": 2.0,
+    "cached_input": 0.2,
+    "cache_write": 2.5,
+    "output": 10.0
+  }
+}

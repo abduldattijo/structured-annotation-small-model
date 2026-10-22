@@ -1,0 +1,50 @@
+{"id": "14541", "text": "get me details of this person", "gold": {"scenario": "general", "intent": "general_quirky", "slots": []}}
+{"id": "6677", "text": "space research", "gold": {"scenario": "general", "intent": "general_quirky", "slots": []}}
+{"id": "13011", "text": "do you think time travel is possible", "gold": {"scenario": "general", "intent": "general_quirky", "slots": []}}
+{"id": "15258", "text": "latest news feed from facebook", "gold": {"scenario": "social", "intent": "social_query", "slots": [["media_type", "facebook"]]}}
+{"id": "7309", "text": "what is my first appointment today", "gold": {"scenario": "calendar", "intent": "calendar_query", "slots": [["event_name", "appointment"], ["date", "today"]]}}
+{"id": "682", "text": "follow news about hilary email issue in future", "gold": {"scenario": "news", "intent": "news_query", "slots": [["news_topic", "hilary email issue"], ["time", "future"]]}}
+{"id": "4632", "text": "please turn bedroom lights off", "gold": {"scenario": "iot", "intent": "iot_hue_lightoff", "slots": [["house_place", "bedroom"]]}}
+{"id": "16612", "text": "send email to mom saying happy birthday", "gold": {"scenario": "email", "intent": "email_sendemail", "slots": [["relation", "mom"], ["event_name", "birthday"]]}}
+{"id": "8934", "text": "notify me with all events in the next one week", "gold": {"scenario": "calendar", "intent": "calendar_set", "slots": [["time", "next one week"]]}}
+{"id": "8522", "text": "i want to add something to my calendar", "gold": {"scenario": "calendar", "intent": "calendar_set", "slots": []}}
+{"id": "7007", "text": "set an appointment for allen on tomorrow", "gold": {"scenario": "calendar", "intent": "calendar_set", "slots": [["event_name", "appointment"], ["person", "allen"], ["date", "tomorrow"]]}}
+{"id": "15778", "text": "send email to emilia saying i will be late please don't wait with dinner", "gold": {"scenario": "email", "intent": "email_sendemail", "slots": [["person", "emilia"], ["meal_type", "dinner"]]}}
+{"id": "13465", "text": "is there life on other planets", "gold": {"scenario": "general", "intent": "general_quirky", "slots": []}}
+{"id": "14263", "text": "what's the exchange rate between the us dollar and the euro", "gold": {"scenario": "qa", "intent": "qa_currency", "slots": [["currency_name", "us dollar"], ["currency_name", "euro"]]}}
+{"id": "5322", "text": "what is the weather like in miami florida today", "gold": {"scenario": "weather", "intent": "weather_query", "slots": [["place_name", "miami florida"], ["date", "today"]]}}
+{"id": "16699", "text": "open up my sister's email from yesterday click reply and turn on voice activation for my response", "gold": {"scenario": "email", "intent": "email_sendemail", "slots": [["relation", "sister's"], ["date", "yesterday"]]}}
+{"id": "8333", "text": "remove everything from the calendar", "gold": {"scenario": "calendar", "intent": "calendar_remove", "slots": []}}
+{"id": "6188", "text": "dolores do you notice something odd about your world", "gold": {"scenario": "general", "intent": "general_quirky", "slots": []}}
+{"id": "10218", "text": "what is the cooking time for boiled eggs", "gold": {"scenario": "cooking", "intent": "cooking_recipe", "slots": [["food_type", "boiled eggs"]]}}
+{"id": "15272", "text": "can you tell me what happened to my social media", "gold": {"scenario": "social", "intent": "social_query", "slots": []}}
+{"id": "15540", "text": "did mark post anything new on facebook", "gold": {"scenario": "social", "intent": "social_query", "slots": [["person", "mark"], ["media_type", "facebook"]]}}
+{"id": "3863", "text": "what person produced the song that is on the radio", "gold": {"scenario": "music", "intent": "music_query", "slots": []}}
+{"id": "8834", "text": "remove all my meetings for the rest of the week", "gold": {"scenario": "calendar", "intent": "calendar_remove", "slots": [["event_name", "meetings"], ["time", "the rest of the week"]]}}
+{"id": "2538", "text": "what is the status on my latest order", "gold": {"scenario": "takeaway", "intent": "takeaway_query", "slots": []}}
+{"id": "4979", "text": "please speak quieter to me", "gold": {"scenario": "audio", "intent": "audio_volume_down", "slots": []}}
+{"id": "2544", "text": "what is it like outside", "gold": {"scenario": "weather", "intent": "weather_query", "slots": []}}
+{"id": "12956", "text": "in what scenario would you use word inconvenience", "gold": {"scenario": "qa", "intent": "qa_definition", "slots": [["definition_word", "inconvenience"]]}}
+{"id": "1791", "text": "is it possible for you to provide the likes of my music", "gold": {"scenario": "music", "intent": "music_query", "slots": []}}
+{"id": "10751", "text": "google translate", "gold": {"scenario": "lists", "intent": "lists_query", "slots": []}}
+{"id": "13658", "text": "how old is angelina jolie", "gold": {"scenario": "qa", "intent": "qa_factoid", "slots": [["person", "angelina jolie"]]}}
+{"id": "4515", "text": "change the color of the lights", "gold": {"scenario": "iot", "intent": "iot_hue_lightchange", "slots": []}}
+{"id": "17048", "text": "just let me know new emails from sara", "gold": {"scenario": "email", "intent": "email_query", "slots": [["person", "sara"]]}}
+{"id": "15559", "text": "post to tumblr i'm having fun", "gold": {"scenario": "social", "intent": "social_post", "slots": [["media_type", "tumblr"]]}}
+{"id": "9343", "text": "please play the radio", "gold": {"scenario": "play", "intent": "play_radio", "slots": []}}
+{"id": "16991", "text": "check emails from jane doe", "gold": {"scenario": "email", "intent": "email_query", "slots": [["person", "jane doe"]]}}
+{"id": "12181", "text": "send an uber to me right now", "gold": {"scenario": "transport", "intent": "transport_taxi", "slots": [["transport_agency", "uber"]]}}
+{"id": "13859", "text": "how much is us dollar against rupee", "gold": {"scenario": "qa", "intent": "qa_currency", "slots": [["currency_name", "us dollar"], ["currency_name", "rupee"]]}}
+{"id": "10506", "text": "what are my lists", "gold": {"scenario": "lists", "intent": "lists_query", "slots": []}}
+{"id": "15460", "text": "send complaint through twitter consumer service", "gold": {"scenario": "social", "intent": "social_post", "slots": [["business_name", "consumer service"]]}}
+{"id": "2622", "text": "mute all responses now", "gold": {"scenario": "audio", "intent": "audio_volume_mute", "slots": []}}
+{"id": "5449", "text": "run indian folk song", "gold": {"scenario": "play", "intent": "play_music", "slots": [["music_genre", "indian folk"]]}}
+{"id": "1858", "text": "bring me the latest tech news", "gold": {"scenario": "news", "intent": "news_query", "slots": [["news_topic", "tech"]]}}
+{"id": "12575", "text": "i need to go to lyon book a train ticket", "gold": {"scenario": "transport", "intent": "transport_ticket", "slots": [["place_name", "lyon"], ["transport_type", "train"]]}}
+{"id": "1277", "text": "hey", "gold": {"scenario": "general", "intent": "general_greet", "slots": []}}
+{"id": "15397", "text": "tell them that their lines were too long", "gold": {"scenario": "social", "intent": "social_post", "slots": []}}
+{"id": "14645", "text": "stock company name", "gold": {"scenario": "qa", "intent": "qa_stock", "slots": []}}
+{"id": "11743", "text": "which book fair events are taking place next week in washington d. c.", "gold": {"scenario": "recommendation", "intent": "recommendation_events", "slots": [["event_name", "book fair"], ["date", "next week"], ["place_name", "washington d. c."]]}}
+{"id": "5728", "text": "every light of room increase its intensity", "gold": {"scenario": "iot", "intent": "iot_hue_lightup", "slots": [["device_type", "every light"], ["house_place", "room"]]}}
+{"id": "8263", "text": "olly remind me about tomorrow's meeting tonight", "gold": {"scenario": "calendar", "intent": "calendar_set", "slots": [["date", "tomorrow's"], ["event_name", "meeting"], ["timeofday", "tonight"]]}}
+{"id": "9822", "text": "listen to the martian from downpour", "gold": {"scenario": "play", "intent": "play_audiobook", "slots": [["audiobook_name", "the martian"], ["app_name", "downpour"]]}}

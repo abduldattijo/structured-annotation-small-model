@@ -1,0 +1,22 @@
+{
+  "n": 2974,
+  "errors": 0,
+  "parse_failures": 0,
+  "not_clean_replies": 0,
+  "scenario_accuracy": 0.9021519838601211,
+  "intent_accuracy": 0.8577673167451244,
+  "slots_exact_accuracy": 0.5958305312710155,
+  "whole_record_accuracy": 0.5265635507733692,
+  "slot_precision": 0.6203059805285118,
+  "slot_recall": 0.6337477797513321,
+  "slot_f1": 0.6269548409769812,
+  "model": "gpt-6-sol",
+  "reasoning_effort": "none",
+  "max_output_tokens": 200,
+  "cost_usd": 4.563474,
+  "input_tokens_mean": 644.2878278412912,
+  "output_tokens_mean": 24.588096839273707,
+  "cache_read_tokens_mean": 0.0,
+  "cache_write_tokens_mean": 0.0,
+  "incomplete_rows": 0
+}

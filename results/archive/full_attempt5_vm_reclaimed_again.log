@@ -1,0 +1,113 @@
+balance before: Current balance: 598.36 compute units
+[colab] Creating session 'exp'...
+[colab] Session READY.
+Installation Complete (via uv)!
+  torchao: ['  Successfully uninstalled torchao-0.10.0']
+  [colab] Uploaded '<temp file>' to '/content/.k'
+key in memory only | file removed: True | length ok: True
+transformers 5.20.1 | peft 0.21.2 | torch 2.11.0+cu130
+=== restore adapter seed 0
+  started: restore_adapter_seed_0
+/usr/local/lib/python3.13/dist-packages/huggingface_hub/utils/_auth.py:138: UserWarning: 
+Error while fetching `HF_TOKEN` secret value from your vault: 'Requesting secret HF_TOKEN timed out. Secrets can only be fetched when running from the Colab UI.'.
+  warnings.warn(f"\nError while fetching `HF_TOKEN` secret value from your vault: '{str(e)}'.")
+unexpected keys: 0
+  finished in 34 s
+=== dev sanity check seed 0
+  
+started: dev_sanity_check_seed_0
+{
+ "n": 300,
+ "errors": 0,
+ "parse_failures": 0,
+ "not_clean_replies": 0,
+ "scenario_accuracy": 0.89,
+ "intent_accuracy": 0.86,
+ "slots_exact_accuracy": 0.7166666666666667,
+ "whole_record_accuracy": 0.65,
+ "slot_precision": 0.7570977917981072,
+ "slot_recall": 0.7868852459016393,
+ "slot_f1": 0.7717041800643086,
+ "model": "Qwen/Qwen3-0.6B",
+ "adapter": "/content/adapter_s0",
+ "split": "dev",
+ "dtype": "float16",
+ "batch_size": 64,
+ "gpu": "Tesla T4",
+ "records_per_second_batched": 33.05,
+ "batched_total_seconds": 9.1,
+ "peak_gpu_memory_gb": 1.68,
+ "latency_one_record_median_s": 0.971,
+ "cut_off_replies": 0
+}
+  finished in 35 s
+  [colab] Downloaded '/content/local_dev_s0.jsonl' to 'results/full/local_dev_s0.jsonl'
+  [colab] Downloaded '/content/local_dev_s0_summary.json' to 'results/full/local_dev_s0_summary.json'
+  dev whole record accuracy 0.650
+=== local test seed 0
+  
+started: local_test_seed_0
+{
+ "n": 2974,
+ "errors": 0,
+ "parse_failures": 0,
+ "not_clean_replies": 0,
+ "scenario_accuracy": 0.9132481506388702,
+ "intent_accuracy": 0.8816408876933423,
+ "slots_exact_accuracy": 0.7649630127774042,
+ "whole_record_accuracy": 0.699058507061197,
+ "slot_precision": 0.7835664335664335,
+ "slot_recall": 0.7960923623445826,
+ "slot_f1": 0.7897797356828195,
+ "model": "Qwen/Qwen3-0.6B",
+ "adapter": "/content/adapter_s0",
+ "split": "test",
+ "dtype": "float16",
+ "batch_size": 64,
+ "gpu": "Tesla T4",
+ "records_per_second_batched": 38.31,
+ "batched_total_seconds": 77.6,
+ "peak_gpu_memory_gb": 1.8,
+ "latency_one_record_median_s": 1.018,
+ "cut_off_replies": 0
+}
+  finished in 193 s
+  [colab] Downloaded '/content/local_test_s0.jsonl' to 'results/full/local_test_s0.jsonl'
+  [colab] Downloaded '/content/local_test_s0_summary.json' to 'results/full/local_test_s0_summary.json'
+=== train seed 1
+  
+{'step': 790, 'loss': 0.0129, 'seconds': 906.3}
+{'step': 800, 'loss': 0.0227, 'seconds': 917.6}
+{'step': 810, 'loss': 0.0352, 'seconds': 928.7}
+{'step': 820, 'loss': 0.0165, 'seconds': 939.8}
+{'step': 830, 'loss': 0.0348, 'seconds': 951.0}
+{'step': 840, 'loss': 0.0244, 'seconds': 962.0}
+{'step': 850, 'loss': 0.0331, 'seconds': 973.2}
+{'step': 860, 'loss': 0.0221, 'seconds': 984.2}
+{'step': 870, 'loss': 0.0283, 'seconds': 995.5}
+{'step': 880, 'loss': 0.028, 'seconds': 1006.7}
+{'step': 890, 'loss': 0.0307, 'seconds': 1017.9}
+{'step': 900, 'loss': 0.0292, 'seconds': 1029.2}
+{'step': 910, 'loss': 0.0394, 'seconds': 1040.4}
+{'step': 920, 'loss': 0.0319, 'seconds': 1051.5}
+{'step': 930, 'loss': 0.0298, 'seconds': 1062.8}
+{'step': 940, 'loss': 0.0312, 'seconds': 1074.0}
+{'step': 950, 'loss': 0.0199, 'seconds': 1085.2}
+{'step': 960, 'loss': 0.0362, 'seconds': 1096.6}
+{'step': 970, 'loss': 0.0335, 'seconds': 1107.9}
+{'step': 980, 'loss': 0.0138, 'seconds': 1119.4}
+{'step': 990, 'loss': 0.0217, 'seconds': 1130.7}
+{'step': 1000, 'loss': 0.0202, 'seconds': 1141.7}
+{'step': 1010, 'loss': 0.0153, 'seconds': 1152.8}
+{'step': 1020, 'loss': 0.013, 'seconds': 1163.9}
+{'step': 1030, 'loss': 0.0175, 'seconds': 1174.9}
+{'step': 1040, 'loss': 0.0133, 'seconds': 1186.0}
+{'step': 1050, 'loss': 0.0121, 'seconds': 1197.1}
+{'step': 1060, 'loss': 0.0449, 'seconds': 1208.2}
+{'step': 1070, 'loss': 0.0313, 'seconds': 1219.4}
+{'step': 1080, 'loss': 0.0166, 'seconds': 1230.5}
+  finished in 1242 s
+  adapter weights for seed 1 saved to results/full/adapters/s1
+  [colab] Downloaded '/content/adapter_s1_train_info.json' to 'results/full/adapter_s1_train_info.json'
+=== local test seed 1
+  

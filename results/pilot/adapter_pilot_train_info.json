@@ -1,0 +1,34 @@
+{
+ "model": "Qwen/Qwen3-0.6B",
+ "examples": 1000,
+ "epochs": 1,
+ "batch": 32,
+ "lr": 0.0002,
+ "rank": 16,
+ "steps": 32,
+ "train_seconds": 23.5,
+ "peak_gpu_memory_gb": 12.56,
+ "trainable_params_millions": 10.09,
+ "loss_log": [
+  {
+   "step": 10,
+   "loss": 0.8043,
+   "seconds": 8.1
+  },
+  {
+   "step": 20,
+   "loss": 0.4953,
+   "seconds": 15.0
+  },
+  {
+   "step": 30,
+   "loss": 0.4392,
+   "seconds": 21.8
+  },
+  {
+   "step": 32,
+   "loss": 0.2944,
+   "seconds": 22.8
+  }
+ ]
+}

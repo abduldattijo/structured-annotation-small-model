@@ -1,0 +1,47 @@
+{
+ "data": "MASSIVE 1.1 en-US, train 11514, dev 2033, test 2974, from amazon-massive-dataset-1.1.tar.gz",
+ "dev_sanity_check": "300 dev rows after training seed 0. Only to catch a broken run. No tuning on the test split.",
+ "driver": "a437cb2f9835bc4874f78b4a14d999caee45ab8a82b0afcc519da4aaa94afef5",
+ "frozen_on": "2026-10-22",
+ "prompt_selection_rule": "highest whole record accuracy on 300 dev rows (seed 1); a tie goes to the cheaper prompt. Winner: base (3 examples)",
+ "prompt_sha256": "a198e780bbd3af6670ba2700140e3ccdd31cff210bc603a8088ca26e37b8ea78",
+ "prompted_model": {
+  "cache_read_per_mtok": 0.01,
+  "cache_write_5m_per_mtok": 0.125,
+  "cached_test_runs": 1,
+  "id": "claude-haiku-5-5",
+  "max_tokens": 400,
+  "price_in_per_mtok": 0.1,
+  "price_out_per_mtok": 0.5,
+  "thinking": "disabled",
+  "uncached_test_runs": 3,
+  "workers": 6
+ },
+ "refrozen": "2026-10-22, before any test result. (1) after the first full training attempt ran out of GPU memory, batches of 32 are computed in pieces of 8, with the same optimizer steps. (2) after a driver crash lost a trained adapter, the driver retries downloads, saves adapters locally, and keeps the session on failure. (3) after Colab reclaimed the machine right after training, the driver became resumable and restores a saved adapter into a fresh machine. (4) after Colab reclaimed the machine again, the driver sends a keep alive command every two minutes and stops at once if the session is lost. No model, prompt, data, or scoring change.",
+ "scripts": {
+  "massive_data": "b9e6e804bdfad6c0ac8d2bcdd44bf2aa15dad14a3cc164b8cc928645a686afcd",
+  "run_api": "d869e0b3540b1476251c3a2e08894b209ddb7bcaf3e2a5c9b46ee9a4abed3aff",
+  "run_local": "f9e845bfdf7320ca5e4bbf39d6c495e220f1b758e44903d1563bf375901bca9f",
+  "schema": "69556c974d562d845d1664c5d900ecbce9a441c49912b04ee6417c56aaebb2d8",
+  "train_lora": "12bd0501a410b5f313defea92a14113415fe58a42e99d110c220f603ec1619e7"
+ },
+ "small_model": {
+  "batch": 32,
+  "decoding": "greedy, 96 new tokens at most",
+  "epochs": 3,
+  "id": "Qwen/Qwen3-0.6B",
+  "lr": 0.0002,
+  "method": "LoRA, rank 16, alpha 32, dropout 0.05, all linear layers",
+  "micro_batch": 8,
+  "precision": "float32 weights with float16 autocast for training, float16 for serving",
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "serving_batch": 64,
+  "train_rows": 11514
+ },
+ "spend_cap_usd": 2.0,
+ "test_split": "opened once per system for scoring. No change to any setting after seeing test results"
+}
