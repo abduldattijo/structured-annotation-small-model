@@ -2,9 +2,9 @@
 
 *On 2,974 voice commands, training beat Claude Haiku and GPT-6 Sol given the same prompt. Then I tested how much better instructions could recover for Haiku.*
 
-![Bar chart of whole record accuracy on 2,974 test commands. Qwen3 0.6B trained scores 70.35, Haiku with label definitions 56.66, GPT-6 Sol with the original prompt 52.66, and Haiku with the original prompt 47.86.](figures/featured_chart.png)
+![A small tray of blank cards sorted into color coded slots beside a large cabinet where several cards sit in the wrong slots or lie on the floor.](figures/featured_image.png)
 
-*Chart of the Table 1 results. Image by author.*
+*Illustration generated for this article with an AI image model. It is a picture of the question the article tests, a small tray beside a large cabinet sorting the same cards, and it does not show any result.*
 
 My 0.6 billion parameter model labeled 70.35 percent of voice commands exactly right. Parameters are the numbers that training adjusts inside a model. A prompted Claude Haiku 5.5 managed 47.86 percent, where a prompt is the written instructions sent with every record. A later GPT-6 Sol pass, given the same prompt, reached 52.66 percent.
 
