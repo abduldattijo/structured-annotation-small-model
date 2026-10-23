@@ -1,6 +1,6 @@
 # Structured annotation, a small trained model against prompted API models
 
-Code, saved predictions, and cost logs for the article "I Fine Tuned a 0.6B Model to Beat Claude Haiku at Labeling. Writing Better Instructions Recovered Only 9 of 22 Points" (`draft.md`).
+Code, saved predictions, and cost logs for the article "I Fine Tuned a 0.6B Model to Beat Claude Haiku and GPT-6 Sol at Labeling. Better Instructions Recovered Only 9 of 22 Points" (`draft.md`).
 
 The task labels 2,974 test commands from MASSIVE English (en-US) with a scenario, an intent, and a list of slots. A record counts only if every field matches the human label exactly. Systems compared on the same records:
 

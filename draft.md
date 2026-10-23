@@ -1,6 +1,6 @@
-# I Fine Tuned a 0.6B Model to Beat Claude Haiku at Labeling. Writing Better Instructions Recovered Only 9 of 22 Points
+# I Fine Tuned a 0.6B Model to Beat Claude Haiku and GPT-6 Sol at Labeling. Better Instructions Recovered Only 9 of 22 Points
 
-*On 2,974 voice commands, training beat two prompted API models. Then I tested how much better instructions could recover.*
+*On 2,974 voice commands, training beat Claude Haiku and GPT-6 Sol given the same prompt. Then I tested how much better instructions could recover for Haiku.*
 
 ![A small tray of blank cards sorted into color coded slots beside a large cabinet where several cards sit in the wrong slots or lie on the floor.](figures/featured_image.png)
 
@@ -161,7 +161,17 @@ One small oddity remains. Seed 0 scored 65.0 percent whole record accuracy on th
 
 ## What does this mean if you label records at work?
 
-The table turns each result into what it suggests. The advice goes beyond what this one test measured wherever I say guess.
+This is most useful if you tag or extract fields at volume and must choose between paying per record and training once. The table turns each result into what it suggests. The advice goes beyond what this one test measured wherever I say guess.
+
+If I had to give an order, it would be this.
+
+1. Run a prompted model first to get a baseline score.
+
+2. Write one line of meaning for every label and test it.
+
+3. If the labels stay stable and you have labeled records, train a small model.
+
+Step 2 is cheap, and here it recovered 8.80 of the 22.50 point gap. A prompt alone did not learn this dataset's habits.
 
 | What happened | What it means | What to do |
 |---|---|---|
